@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#111827" />
+<title>OM AI YouTube Manager</title>
+<style>
+:root{font-family:Arial, sans-serif;color:#172033;background:#f3f5f9}*{box-sizing:border-box}body{margin:0}.top{background:#111827;color:white;padding:22px 18px 28px}.wrap{max-width:900px;margin:auto}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}.yt{background:#ef4444;border-radius:9px;padding:7px 10px}.top h1{font-size:27px;margin:25px 0 6px}.top p{color:#cbd5e1;margin:0}.main{max-width:900px;margin:-12px auto 40px;padding:0 14px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.tile,.panel{background:white;border-radius:16px;padding:17px;box-shadow:0 5px 20px #1720330b}.tile strong{display:block;font-size:17px;margin-top:8px}.tile span{font-size:13px;color:#667085}.panel{margin-top:15px}.panel h2{font-size:19px;margin:0 0 7px}.muted{color:#667085;font-size:13px;line-height:1.5}label{display:block;font-weight:700;margin:17px 0 8px}input,select,textarea{width:100%;padding:13px;border:1px solid #d5dae3;border-radius:10px;font:inherit;background:white}button{border:0;border-radius:10px;background:#dc2626;color:white;padding:13px 16px;font-weight:700;font-size:15px;cursor:pointer;margin-top:12px;width:100%}button.secondary{background:#1f2937}textarea{min-height:190px;line-height:1.6;resize:vertical}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.note{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:12px;border-radius:10px;font-size:13px;line-height:1.5;margin-top:14px}.footer{text-align:center;color:#667085;font-size:12px;padding:22px}@media(min-width:650px){.stats{grid-template-columns:repeat(4,1fr)}.top{padding:28px 24px 40px}.top h1{font-size:34px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="brand"><span class="yt">▶</span> OM AI YOUTUBE MANAGER</div><h1>आपका YouTube कंटेंट स्टूडियो</h1><p>सोचिए कम, बनाइए ज्यादा — हिंदी कॉमेडी Shorts के लिए</p></div></header>
+<main class="main">
+<section class="stats">
+<div class="tile">🎬<strong>Script Maker</strong><span>वीडियो की कहानी</span></div>
+<div class="tile">🎙️<strong>AI Voice</strong><span>अगले वर्जन में</span></div>
+<div class="tile">📤<strong>YouTube Upload</strong><span>कनेक्शन अगले चरण में</span></div>
+<div class="tile">📊<strong>Analytics</strong><span>कनेक्शन अगले चरण में</span></div>
+</section>
+<section class="panel">
+<h2>🎥 नया वीडियो तैयार करें</h2><p class="muted">अपना वीडियो टॉपिक लिखें। यह शुरुआती डेमो आपके लिए एक हिंदी कॉमेडी स्क्रिप्ट का ढाँचा बनाएगा।</p>
+<label for="topic">वीडियो का टाइटल / टॉपिक</label><input id="topic" placeholder="जैसे: जब मम्मी मोबाइल छीन लेती हैं 😂" />
+<label for="duration">वीडियो की लंबाई</label><select id="duration"><option value="30">30 सेकंड</option><option value="45">45 सेकंड</option><option value="60">60 सेकंड</option></select>
+<button onclick="makeScript()">✨ स्क्रिप्ट तैयार करें</button>
+<label for="result">आपकी स्क्रिप्ट</label><textarea id="result" placeholder="आपकी स्क्रिप्ट यहाँ दिखाई देगी..."></textarea>
+<div class="actions"><button class="secondary" onclick="copyScript()">स्क्रिप्ट कॉपी करें</button><button class="secondary" onclick="downloadScript()">TXT डाउनलोड करें</button></div>
+<div class="note"><b>ध्यान दें:</b> यह पहला फ्रंटएंड डेमो है। इसमें असली AI, आवाज़ बनाना या YouTube पर वीडियो अपलोड करना अभी सक्रिय नहीं है। इसके लिए सुरक्षित बैकएंड और संबंधित सेवाओं की API/OAuth अनुमति अगले चरण में जोड़ेंगे।</div>
+</section>
+</main><div class="footer">OM AI YouTube Manager · शुरुआती संस्करण</div>
+<script>
+function makeScript(){const topic=document.getElementById('topic').value.trim();const duration=document.getElementById('duration').value;if(!topic){alert('पहले वीडियो का टाइटल लिखें।');return;}const lines=[`वीडियो टाइटल: ${topic}`,`लंबाई: लगभग ${duration} सेकंड`,'','सीन 1 — शुरुआत (0–5 सेकंड)','Visual: मुख्य किरदार कैमरे की तरफ देखकर मजेदार अंदाज़ में बात शुरू करता है।','Dialogue: अरे भाई, आज तो गजब ही हो गया!','','सीन 2 — परेशानी (5–15 सेकंड)',`Visual: ${topic} से जुड़ी मजेदार स्थिति दिखाएँ।`,'Dialogue: अब बताओ, इसमें मेरी क्या गलती है?','','सीन 3 — कॉमेडी ट्विस्ट (15–25 सेकंड)','Visual: दूसरा किरदार अचानक मजेदार जवाब देता है।','Dialogue: गलती तुम्हारी नहीं… तुम्हारी अक्ल की छुट्टी है!','','सीन 4 — पंचलाइन और अंत','Visual: दोनों किरदार मजेदार रिएक्शन देते हैं।','Dialogue: ऐसी ही कॉमेडी के लिए चैनल Subscribe करो!','','नोट: यह डेमो स्क्रिप्ट है। अपने टॉपिक के हिसाब से डायलॉग और सीन एडिट करें।'];document.getElementById('result').value=lines.join('\n');}
+function copyScript(){const t=document.getElementById('result');if(!t.value){alert('पहले स्क्रिप्ट तैयार करें।');return;}t.select();if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t.value).then(()=>alert('स्क्रिप्ट कॉपी हो गई।'));}else{document.execCommand('copy');alert('स्क्रिप्ट कॉपी हो गई।');}}
+function downloadScript(){const value=document.getElementById('result').value;if(!value){alert('पहले स्क्रिप्ट तैयार करें।');return;}const blob=new Blob([value],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='om-youtube-script.txt';a.click();URL.revokeObjectURL(a.href);}
+</script>
+</body></html>
